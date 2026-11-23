@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (11.3.rel1)
+# Toolchain: GNU Tools for STM32 (14.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -60,7 +60,7 @@ main-build: 01_baremetal_gpio_led.elf secondary-outputs
 
 # Tool invocations
 01_baremetal_gpio_led.elf 01_baremetal_gpio_led.map: $(OBJS) $(USER_OBJS) C:\Users\josue\OneDrive\Documentos\GitHub\embedded-portfolio\01_baremetal_gpio_led\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "01_baremetal_gpio_led.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\josue\OneDrive\Documentos\GitHub\embedded-portfolio\01_baremetal_gpio_led\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01_baremetal_gpio_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "01_baremetal_gpio_led.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\josue\OneDrive\Documentos\GitHub\embedded-portfolio\01_baremetal_gpio_led\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01_baremetal_gpio_led.map" -Wl,--gc-sections -static -z noexecstack --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
